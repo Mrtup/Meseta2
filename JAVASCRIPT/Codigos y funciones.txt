@@ -1,0 +1,100 @@
+El comando console.log() toma lo que está entre paréntesis y lo registra en la pantalla debajo de tu código; ¡por eso es que se llama console.log() (registro de pantalla)!
+
+--Lista de operadores de comparación: 
+• > Mayor que
+• < Menor que
+• <= Menor o igual que
+• >= Mayor o igual que
+• === Igual que
+• !== Distinto de
+
+-- Lista de varias funciones
+
+prompt(): Traer datos del Usuario.
+
+=: asignación.
+
+==: comparación.
+
+(): parametro de una función. 
+
+var: es un valor.
+
+parseInt(): Función que convierte texto en un número.
+
+\n: salto de linea en JS, el equivalente a br en html.
+
+Concatenación: Llamar un valor mediante una variable asinganda con anterioridad.
+
+if(): Sí.
+
+else: Sí no.
+
+else if(): Sí no, sí.
+
+----TRAER DATOS DE OTRO ARCHIVO
+src
+
+---DIBUJOS EN HTML CANVAS
+<canvas> </canvas>
+
+---ancho  width="300"   ---alto  height="300"
+
+--- OBTENER ELEMENTOS POR EL ID
+var d = document.getElementById ("dibujo");
+----getContext("2d"); funcion del canvas que permite obtener el area de dibujo
+
+----LIENZOS
+.beginPath(); iniciar un camino (arranca un trazo)
+
+.strokeStyle = "red"; ESTO ES UNA PROPIEDAD por ende se comporta como variable. Se le asigna color
+
+.moveTo(100,10); FUNCION DEL CANVAS para mover el lapiz a donde arranca la linea se da la posicion de (x,y) de donde se quiera dibujar
+
+.lineTo(200,200); FUNCION DE TRAZAR UNA LINEA mas las posiciones
+
+.stroke(); DIBUJA LA LINEA
+
+.closePath(); FINALIZA LA LINEA
+
+-----------CREANDO FUNCIONES 
+
+function -se crea la funcion- DibujarLinea
+function DibujarLinea (-se crean los parametros-)
+function DibujarLinea (color, xinicial, yinicial, xfinal, yfinal);
+
+.addEventListener ES PARTE DE TODOS LOS ELEMENTOS INTERACTIVOS QUE SE LE QUIERA DAR UNA FUNCION
+
+-----CAJA DE VARIABLES---
+var teclas ={
+UP: 38
+LEFT: 37
+RIGHT: 39
+DOWN: 40 
+}
+
+---- FUNCIONES CON swich
+function dibujarTeclado(evento)
+{
+    switch (evento.keyCode)
+    {
+    case teclas.UP:
+    console.log ("tecla arriba");
+    break;
+    case teclas.LEFT:
+    break;
+    case teclas.RIGHT:
+    break;
+    case teclas.DOWN:
+    console.log ("tecla abajo");
+    break;
+    }
+}
+
+----ARRAY, MATRICES, ARREGLOS-----
+
+var articulos = ["manzana","pera","mango","fresa"];
+
+
+alert (articulos.length); CUENTA LA CANTIDAD DE ELEMENTOS QUE HAY ()
+

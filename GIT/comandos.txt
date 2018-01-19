@@ -1,0 +1,80 @@
+gradle deploy complila en proyecto
+
+
+--- configuracion de usuario
+git config --global user.name "Mrtup"
+git config --global user.email pinedapablo716@gmail.com
+git config --global core.editor brackets
+
+git log --oneline
+---branch crea o permite ver las ramas
+---merce fusiona las ramas
+
+cd **= Change directory
+**mkdir **= Make directory
+**ls **= list - en ++windows ++deben usar dir
+**clear **= también se puede usar control + L
+**touch **= crea un archivo o modifica su fecha de modificación.
+**rm **= remove -rf(para borrar carpetas)
+
+ESC :
+Nunca usar rm -rf / o se despiden de su pc
+VIM
+i = para poder editar
+:wq = para guardar y salir
+:q! = para salir sin guardar
+
+Las ramas son muy importantes si quieres trabajar con un equipo y no quieres tocar la rama master para no crear conflictos,
+git branch [nombre] se crea una nueva rama
+-l: listamos las ramas
+-d/-D [nombre]: borramos rama
+-m [nombre] [nombre_nuevo]: para renombrar ramas
+
+--- crear rama
+git branch rama
+----mirar ramas
+git branch -l
+--- eliminar rama
+git branch -D rama
+
+
+---- entrar a las ramas
+git checkout rama
+
+git rebase: hace prácticamente lo mismo que merge, cambiamos la historia de nuestro proyecto sin crear bifurcaciones del proyecto. Es mejor usar merge
+Usar solo git rebase de manera local.
+-i: de manera interactiva, nos abrira el editor que tengamos definido en la configuración de git.
+
+git stash: es otro de los limbos, como el staging area. Para agregar los cambios estos deben estar en el staging area.
+git stash list: nos muestra la lista de stash que tengamos.
+git stash drop stash@{numero}: nos permite borrar un stash.
+git stash apply: aplicamos el último cambio
+
+---quitar los cambios que se han hecho en el fichero
+git checkout -- index.html
+
+--- crear llaves GIT
+ssh-keygen -t rsa -b 4069 -C "pinedapablo716@gmail.com"
+--- copiar llave 
+pbcopy < ~/.ssh/id_rsa.pub
+
+---- agregar un repositorio remoto
+git remote add + (repositorio virtual "origin") ruta git@github.com:Mrtup/invie-github.git
+--- validar
+git remote -v
+--eliminar 
+git remote remove + nombre (origin)
+
+---- Traer datos
+git fetch (origin) + rama (master)
+
+----mesclar las ramas remotas 
+git merge origin/master
+---- si carga error
+git merge origin/master --allow-unrelated-histories
+
+----traer cambios del servidor
+git pull
+--- enviar datos al servidor 
+git push
+--- enviar tags git push origin master --tags
